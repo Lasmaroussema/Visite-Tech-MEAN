@@ -1,0 +1,133 @@
+
+
+.contact
+{
+    background-color: azure;
+    width: 99vw !important;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+.socialMedia
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pic
+{
+    height: 95vh !important;
+    width: 99vw !important;  
+    
+}
+
+.p1
+{
+    top: 18%;
+    left: 18%;
+    color: white;
+        font-size: 70px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+}
+.p2
+{
+    top: 35%;
+    left: 22%;
+    color: white;
+        font-size: 70px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        position: absolute;
+}
+.button
+{
+    position: absolute;
+    top: 55%;
+    left: 45%;
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer
+{
+    position: absolute;
+        top: 83%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       width: 100%;
+       background-color: #0B5ED7;
+       padding: 20px;
+}
+.footer div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer p
+{
+   font-size: 18px;
+   margin-left: 30px;
+   width: 350px;
+}
+
+ .pic div button
+{
+   width: 200px;
+   height: 70px;
+   margin-right: 120px;
+   font-weight: bold;
+} 
+.about
+{
+    height: 65vh;
+    width: 20vw;
+    border: 3px solid black;
+    border-radius: 12px;
+    margin: 95px;
+}
+li
+{
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+}
+li:hover
+{
+    filter: drop-shadow(0 0 10px black);
+}
+ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img
+{
+    margin-left: 100px;
+    width: 220px;
+    height:60px;
+}
+.links
+{
+    padding-right: 200px;
+}
+
+.pic img
+{
+    width: 99vw;
+    height: 99vh;
+}
+.f
+{
+    overflow: hidden;
+   transform: translateX(-10px);
+    width: 99vw;
+    height: 99vh;
+}

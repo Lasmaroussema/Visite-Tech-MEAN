@@ -1,0 +1,178 @@
+.f {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-left: 380px;
+}
+.top
+{
+    height: 200px;
+    /* border-radius: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mode {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    /* border-radius: 20px; */
+}
+
+label {
+    font-size: 25px;
+    color: rgb(255, 8, 8);
+}
+
+button {
+    font-size: 24px;
+    border-radius: 10px;
+    
+    color: white;
+    font-weight: 500;
+    width: 140px;
+    height: 50px;
+    border: none;
+    outline: none;
+}
+.mode
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    border: 1px solid black;
+    width: 140px;
+    font-size: 22px;
+}
+img
+{
+    width: 140px;
+    height: 100px;
+}
+.availableAgences
+{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 6px;
+
+}
+.availableAgences div
+{
+    width: 190px;
+    height: 70px;
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+th
+{
+    background-image: linear-gradient(rgb(62, 87, 244),rgb(15, 44, 233));
+    
+    color:white;
+}
+
+.head
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search
+{
+    width: 60px;
+    height: 48px;
+    background-color: rgb(0, 136, 255);
+}
+
+.find
+{
+    background-color: rgb(132, 245, 121)yellow;
+}
+.searchBox
+{
+    position: absolute;
+    top: 34%;
+    left:50%;
+}
+.searchBox div input
+{
+    width: 200px;
+}
+tr
+{
+    font-size: 17px;
+}
+
+.column
+{
+    margin-left:100px ;
+}
+.col-3
+{
+    /* border-radius: 20px; */
+}
+table
+{
+    margin-top: 70px;
+    border: 2px solid black;
+    /* border-radius: 20px; */
+    width: 96%;
+}
+.loc
+{
+    position: absolute;
+    left: 65%;
+    top: 3%;
+    height: 3vh;
+}
+td
+{
+    cursor: pointer;
+}
+
+
+.service 
+{
+    background-color: white;
+    /* border-radius: 20px; */
+    width: 100%;
+    height: 55vh;
+    margin-bottom: 20px;
+    padding-left: 80px;
+    padding-top: 70px;
+}
+.info 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid rgb(4, 232, 232);
+    margin-right: 70px;
+    padding: 20px;
+}
+.top
+{
+    height: 200px;
+}
+.t
+{
+    /* background-color: rgb(230, 227, 227); */
+    background-image: url("../../assets/home1.jpg");
+    background-size: 100% 100%;
+}

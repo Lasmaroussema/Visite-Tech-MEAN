@@ -1,0 +1,71 @@
+.container-fluid
+{
+    background-image: url("../../assets/home1.jpg");
+        background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 99vw;
+    height: 99vh;
+    transform: translateX(-10px);
+}
+
+
+
+.containers {
+    height: 80vh;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+    margin-left: 160px;
+  
+}
+
+.label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.pay {
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.field,
+.field:focus {
+    width: 100%;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+}
+
+.button {
+    width: 45%;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.confirm {
+    border: none;
+    background-color: rgb(0, 132, 255);
+    color: white
+}
+
+.back {
+    background-color: white;
+    border: 1px solid rgb(217, 217, 217);
+}
+.visa,.edinar
+{
+    width: 90%;
+    height: 50%;
+}
+.col-8
+{
+    height: 88vh;
+}

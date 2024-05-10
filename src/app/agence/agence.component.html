@@ -1,0 +1,90 @@
+<div class="row t p-3">
+
+    <div class="col-3 p-2 " style="display: block;background-color: white; display: block;position: fixed;margin-bottom: 30px;">
+        <app-details style="width: 100%;background-color: white; "></app-details>
+    </div>
+
+
+    <div class="col-9">
+            <div class="container-fluid f">
+
+                <div class="row top" style="width: 100%;background-color: rgb(193, 208, 209);margin-bottom: 5px;">
+                    <div *ngIf="!agenceSelected">
+                        <h2 class="text-danger"> Voici les agences disponibles en :</h2>
+                        <div class="column  ">
+                            <div class="pe-5 loc">
+                                <span class="justify-self-start"><img src="../../assets/loc1.png" class="ms-5"></span>
+                                <input type="text" [(ngModel)]="location" disabled class="form-control mb-5 ms-5">
+                            </div>
+                        </div>
+                    </div>
+                    <div *ngIf="agenceSelected">
+                        <h2 class="text-danger"> Choisir les services désires :</h2>
+                    </div>
+                </div>
+
+                <div class="mode pt-5" *ngIf="!agenceSelected">
+            
+                    <div class="w-100 head">
+            
+                        <div class="column  d-flex justify-content-center searchBox">
+                            <div class="form-outline me-2" data-mdb-input-init>
+                                <input type="search" placeholder="Search" id="form1" class="form-control" #search />
+                            </div>
+                            <button type="button" class="btn btn-primary search" (click)="show(search.value)" data-mdb-ripple-init>
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+            
+            
+            
+                    <table class="table table-striped " >
+                        <thead>
+                            <tr>
+                                <th scope="col">Centre</th>
+                                <th scope="col">Adresse</th>
+                                <th scope="col">Type Service</th>
+                                <th scope="col">Horaire</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let i of countries" (click)="ShowInfo(i[0],i[1])">
+                                <td 
+                                    [style.background-color]="(search.value!='' && i[0].startsWith(search.value) )?'rgb(132, 245, 121)':''">
+                                    {{i[0]}}</td>
+                                <td>{{i[1]}}</td>
+                                <td>{{TypeService[0]}} / {{TypeService[1]}}</td>
+                                <td>{{Horaire}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            
+                </div>
+
+                <div class="service" *ngIf="agenceSelected">
+                    <div class="row w-100">
+                        <div class="col-3 info">
+                            <h3>Diagnostic technique </h3>
+                            <p>Analyse complete des composantes de vehicule pour detecter les eventuels problèmes mécanique , électriques ou électroniques</p>
+                            <input type="checkbox" [(ngModel)]="change" (click)="add1()">
+                        </div>
+                        <div class="col-3 info">
+                            <h3>Reglage technique </h3>
+                            <p>Ajustement des paramètres et des réglages du véhicule tels que le moteur , la suspension , les freins , etc., pour garantir un fonctionnement optimal</p>
+                            <input type="checkbox" (click)="add2()">
+                        </div>
+                        <div class="col-3 info">
+                            <h3>Entretien Préventif</h3>
+                            <p>Effectuer des réparations mineurs , le remplacement des pièces d'usure et les services de maintenance réguliere pour protecter la véhicule</p>
+                            <input type="checkbox" (click)="add3()">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary mb-3" *ngIf="agenceSelected" (click)="GoTODate()">Submit</button>
+            </div>
+
+    </div>
+
+</div>

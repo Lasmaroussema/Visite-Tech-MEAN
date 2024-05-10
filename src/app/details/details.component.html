@@ -1,0 +1,6 @@
+<div class="container-fluid">
+    <h3 class="ms-5 mt-2 mb-4 text-danger">Vos informations</h3>
+    <ul>
+        <li *ngFor="let i of rdv;let ind=index" class="mt-3"><h5 [class]="i[1]!=''?'text-primary':'text-light'">{{i[0]}}</h5><span style="font-size: 15px;font-weight: 400;">{{i[1]}}</span></li>
+    </ul>
+</div>

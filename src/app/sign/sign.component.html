@@ -1,0 +1,71 @@
+<div class="container-fluid f">
+    <div class="row">
+    
+        <div class="col-6 p-0 left-side">
+            <img class="img img-fluid" src="../../assets/aaa.jpg">
+        </div>
+    
+        <div class="col-6  right-side">
+            
+                <div class="form">
+                    <h2 class="ms-5 mb-4 text-danger">Identification Vehicule </h2>
+                    <select  name="Type Immat" [(ngModel)]="seletedvalue" (change)="showOption()" class=" form-control" >
+                        <option value="" disabled selected hidden>Type D'Immatriculation</option>
+                        <option value="Série Normale (TU) تونس">Série Normale (TU) تونس</option>
+                        <option value="Régime Suspensif (RS) ن ت">Régime Suspensif (RS) ن ت</option>
+                        <option value="Moto (MOTO) د ن">Moto (MOTO) د ن</option>
+                        <option value="Tracteur (TRAC) ج ف">Tracteur (TRAC) ج ف</option>
+                        <option value="Personnel Administratif et Technique (PAT) م ا ف">Personnel Administratif et Technique (PAT) م ا ف</option>
+                    </select>
+                    
+                    <label for="Username" class="" id="immat"  *ngIf="seletedvalue!=''"> N° Immatriculation : </label>
+
+
+                    <div class="d-flex" *ngIf="seletedvalue=='Série Normale (TU) تونس'">
+                        <input class="form-control w-50" placeholder="Série" type="text" #serie>
+                        <span class="ms-1"><b>TN تونس</b></span>
+                        <input class="form-control w-50" placeholder="N°" type="text" #num>
+                    </div>
+
+                    <div class="d-flex" *ngIf="seletedvalue=='Régime Suspensif (RS) ن ت'">
+                        <span class="me-1"><b>RS</b></span>
+                        <input class="form-control w-50" placeholder="N°" type="text" >
+                        <span class="ms-1"><b>ن ت</b></span>
+                       
+                    </div>
+
+                    <div class="d-flex" *ngIf="seletedvalue=='Moto (MOTO) د ن'">
+                        <span class="me-1"><b>MOTO</b></span>
+                        <input class="form-control w-50" placeholder="N°" type="text">
+                        <span class="ms-1"><b>د ن</b></span>
+                    </div>
+
+
+                    <div class="d-flex" *ngIf="seletedvalue=='Tracteur (TRAC) ج ف'">
+                        <span class="me-1"><b>TRAC</b></span>
+                        <input class="form-control w-50" placeholder="N°" type="text">
+                        <span class="ms-1"><b>ج ف</b></span>
+                    </div>
+
+
+                    <div class="d-flex" *ngIf="seletedvalue=='Personnel Administratif et Technique (PAT) م ا ف'">
+                        <input class="form-control w-50" placeholder="Série" type="text">
+                        <span class="ms-1"><b>P A T م-ا-ف  </b></span>
+                        <input class="form-control w-50" placeholder="N°" type="text">
+                    </div>
+
+
+                </div>
+                <div class="form"  *ngIf="seletedvalue!=''" class="chassis">
+                    <label  for="Password"  class=" mb-4"> 5 Derniers caracteres de châssis: </label>
+                    <input class="form-control" type="text" #chassis>
+                </div>
+                <button class="" (click)="GoToAuth()">submit</button>
+           
+        </div>
+    
+    </div>
+</div>
+
+
+

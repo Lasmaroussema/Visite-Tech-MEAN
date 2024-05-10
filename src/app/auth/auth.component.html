@@ -1,0 +1,47 @@
+<div class="container-fluid f">
+    <div class="row">
+
+        <div class="col-6 p-0 left-side">
+            <img class="img img-fluid" src="../../assets/sms2.png">
+        </div>
+
+        <div class="col-6  right-side">
+            <h2 class="text-danger">Identification Client :</h2>
+            <div class="form"   *ngIf="!nextStep">
+                <!-- phone number phase -->
+               <div class="smslabel">
+                <label for="smscode" class="mb-2">Entrez Votre Numéro de Téléphone :</label>
+                <div  class="d-flex mt-4 mb-5 ">
+                    <select name="" id="phone" class="form-control me-3" [(ngModel)]="region" required="">
+                        <option value="" disabled selected hidden >Region</option>
+                        <option >TN +216</option>
+                        <option >ALG +213</option>
+                        <option >LIB +218</option>
+                    </select>
+                    <input type="text" id="number" class="form-control " required="" [(ngModel)]="phone" placeholder="XX XXX XXX">
+                </div>
+               </div>
+                
+                <button class="" (click)="ReadPhoneNum()">submit</button>
+
+                <div class="alert alert-warning mt-3" *ngIf="emptyInput">Vous devez remplir tous les champs</div>
+            </div>
+
+            <div class="form"  *ngIf="nextStep">
+               
+            <!-- send code phase -->
+            
+            <div class="smslabel">
+                <label for="smscode" class="mb-2 mt-5">Un code est envoyé par sms </label>
+                <div class="d-flex  mb-5 ">
+                    
+                    <input type="text" id="number" class="form-control ms-5 " placeholder="        X X X X X X">
+                </div>
+            </div>
+                
+                <button class="" (click)="GoToAgence()">submit</button>
+            </div>
+
+        </div>
+    </div>
+</div>
