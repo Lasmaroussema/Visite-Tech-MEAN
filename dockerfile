@@ -2,13 +2,13 @@ FROM node:20
 
 WORKDIR /usr/src/app
   
-COPY *.json /usr/src/app
+COPY package*.json ./
 
-RUN npm ic
-RUN npm ic @angular/cli
+RUN npm install
+RUN npm install -g @angular/cli
 
-COPY . /usr/src/app
+COPY . .
 
 EXPOSE 4200
 
-CMD ['ng','serve']
+CMD ['ng','serve','--host','0.0.0.0']
