@@ -18,7 +18,7 @@ pipeline {
         }
       stage('push') {
             steps {
-                sh 'docker push visitetech '
+                sh 'docker push lasmaroussema2428/visitetech'
             }
         }
       
