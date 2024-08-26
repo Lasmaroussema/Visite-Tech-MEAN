@@ -16,6 +16,12 @@ pipeline {
             
             }
         }
+      stage('push') {
+            steps {
+                sh 'docker push visitetech '
+            }
+        }
+      
         
     }
     post {
